@@ -1,8 +1,21 @@
+#Escreva um programa que leia um numero inteiro qualquer e peça para o usuário
+#escolher qual será a base de conversao
+
+n = int( input("Digite um numero inteiro para conversao: "))
+if (n >= 0):
+    e = str(input('Digite binário, octal ou hexadecimal: '))
+    if e == 'octal':
+        print(oct(n)[2:])
+
+    elif e == 'binário':
+        print(bin(n)[2:])
+
+    elif e == 'hexadecimal':
+        print(hex(n)[2:])
+
+    else:
+        print("Opção invalida. Tente novamente")
 
 
-a = 3
-b = 5
-print(' Os valores sao \033[32m{}\033[m e \033[31m{}\033[m!!!'. format(a,b))
-
-nome = 'Wagner'
-print('Olá! Muito prazer em te conhecer, {}{}{}!!!!'.format('\033[;31;40m', nome,'\033[m'))
+else:
+    print (" Digite um numero inteiro positivo")
