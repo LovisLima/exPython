@@ -1,0 +1,33 @@
+# Aprimorar o desafio anterior, mostrando no final:
+# a soma de todos os valores pares digitados
+# a soma de todos os valores da terceira coluna
+# O maior valor da segunda linha
+
+
+matriz = [[0,0,0],[0,0,0],[0,0,0]]
+spares = mai = scol = 0
+
+for l in range (0,3):
+    for c in range(0,3):
+        matriz[l][c] = int(input(f'Digite um valor para[{l}, {c}]: '))
+
+print('-='*30)
+for l in range(0,3):
+    for c in range(0,3):
+        print(f'[{matriz[l][c]:^5}]',end='')
+        if matriz[l][c] % 2 == 0:
+            spares += matriz[l][c]
+
+    print()
+print('-='*30)
+print(f'soma dos pares: {spares}')
+for l in range(0,3):
+    scol += matriz[l][2]
+print(f'soma da terceira coluna: {scol}')
+
+for c in range(0,3):
+    if c == 0 or  matriz[1][c] > mai:
+     mai = matriz[1][c]
+print(f'O maior numero da segunda linha é: {mai}')
+
+
